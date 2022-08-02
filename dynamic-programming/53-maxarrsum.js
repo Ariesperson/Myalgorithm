@@ -69,4 +69,14 @@ function  maxSubArray3  ( nums ) {
 
     return max_so_far;
 };
+// 动态规划
+var maxSubArray4 = function(nums) {
+    let pre = 0, maxAns = nums[0];
+    nums.forEach((x) => {
+        pre = Math.max(pre + x, x);
+        maxAns = Math.max(maxAns, pre);
+    });
+    return maxAns;
+};
+
 maxSubArray2([-2, 1, -3, 4,-6, -1, 2, 1, -5, 4])
