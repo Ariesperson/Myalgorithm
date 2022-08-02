@@ -14,5 +14,3 @@ var twoSum1 = function(nums, target) {
     }
     return [];
 };
-let result1 = twoSum1([0,4,3,0]
-    ,0)
