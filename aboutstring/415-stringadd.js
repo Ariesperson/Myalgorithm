@@ -40,13 +40,13 @@
     add = 0;
     const ans = [];
     while (i >= 0 || j >= 0 || add != 0) {
-        const x = i >= 0 ? num1.charAt(i) - '0' : 0;
-        const y = j >= 0 ? num2.charAt(j) - '0' : 0;
+        const x = i >= 0 ? num1.charAt(i) - '0' : 0;  //双指针移动
+        const y = j >= 0 ? num2.charAt(j) - '0' : 0;  //
         const result = x + y + add;
         ans.push(result % 10);
         add = Math.floor(result / 10);
         i -= 1;
         j -= 1;
     }
-    return ans.reverse().join('');
+    return ans.reverse().join(''); //最后得出结果你装吓
 }
