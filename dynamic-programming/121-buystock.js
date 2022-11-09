@@ -29,7 +29,7 @@ var maxProfit2 = function(prices) {
     //     dp[index][1] = Math.max(dp[i-1][1], -prices[i]) //第1天不持有，第i天卖出
     // }
     // return dp[n-1][0]
-
+    
     //状态压缩
     dp[0] = 0 //第0天不持有
     dp[1] = -prices[0] //第0天持有
