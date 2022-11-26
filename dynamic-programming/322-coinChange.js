@@ -13,8 +13,10 @@ var coinChange = function(coins, amount) {
             if(i-coin>=0) 
             //dp[i - coin]： 当前面额i减当前硬币价值所需要的最少硬币
             //dp[i] 可由 dp[i - coin] + 1 转换而来
-            dp[i] = Math.min(dp[i],dp[i-coin]+1);
+            {dp[i] = Math.min(dp[i],dp[i-coin]+1);
+            console.log(`需要兑换的面额是${i},coin是${coin}`,dp[i])}
         }   
     }
     return dp[amount] === Infinity ? -1 : dp[amount]//如果dp[amount] === Infinity，则无法兑换
 };
+coinChange([1,2,5],11)
