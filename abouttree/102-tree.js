@@ -11,13 +11,14 @@
  * @param {TreeNode} root
  * @return {number[][]}
  */
+//
  var levelOrder = function(root) {
+    // 问题 是怎么把这个二叉树按层级展平， 那肯定是按照广度优先遍历
     let res = [];
     if(root === null) return res;
     let list = [];
     list.push(root);//将根结点放进来
     while(list.length) {//
-        debugger
         let curLen = list.length;//上一轮剩下的节点，全属于下一层
         let newLevel = [];
         for(let i = 0; i < curLen; i++) {//同层所有节点
@@ -31,3 +32,21 @@
     }
     return res;
 };
+// 
+var levelOrder = function(root) {
+    var res = []
+    let list = []
+    list.push(root)
+    while(list.length){
+        let newLevel = [];
+        for (let index = 0; index < list.length; index++) {
+            let node = list.shift()
+            newLevel.push(node.val)
+            if(node.left)
+            list.push(node.left)
+            if(node.right)
+            list.push(node.left)
+        }
+        res.push(newLevel)
+    }
+}
