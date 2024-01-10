@@ -55,5 +55,3 @@ var strStranswer = function(haystack, needle) {
 var strStr = function(haystack, needle) {
     return haystack.indexOf(needle)
 };
-const haystack = "a", needle = "a"
-console.log(strStr(haystack,needle));
