@@ -38,6 +38,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
     for (let i = 0; i <= Math.floor(len/2); i++) {
         preValue = curValue;
         // 需要在nums1上移动point1指针
+        //判断是否指针还在左侧，且确保值一定是递增的。
         if (point1 < n1 && (point2 >= n2 || nums1[point1] < nums2[point2])) {
             curValue = nums1[point1];
             point1++;
